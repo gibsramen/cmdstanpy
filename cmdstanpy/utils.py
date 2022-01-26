@@ -51,7 +51,7 @@ def get_logger() -> logging.Logger:
     """cmdstanpy logger"""
     logger = logging.getLogger('cmdstanpy')
     if len(logger.handlers) == 0:
-        logging.basicConfig(level=logging.INFO)
+        logger.setLevel(logging.INFO)
     return logger
 
 
